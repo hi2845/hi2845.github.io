@@ -2,10 +2,12 @@
 <head>
 <script>
 
-function getAwords(words) {
+function getWordsBeginWith(words, begin_char) {
     var return_words = [];
+    var small_char = begin_char, toLowerCase();
+    var big_char = begin_char, toupperCase();
     for (var i = 0; i < words.length; i++) {
-		if (words[i].startsWith('a') || words[i].startsWith('A'))
+		if (words[i].startsWith('begin_char') || words[i].startsWith('begin_char'))
 		    return_words.push(words[i]);
 	}
 	return return_words;
