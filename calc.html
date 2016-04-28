@@ -10,10 +10,10 @@
 
         function display_debug() {
             var debug_out = document.getElementById("debug_area");
-            var debug_text = "<p><b>" + first_val +" <p>";
-            debug_text +=  operand + "<p> ";
-            debug_text += second_val + "</b></p>";
+            var debug_text = "<p>first_val:" + first_val + "</p>";
+            debug_text += "<p>operand:" + operand + "</p>";
             debug_text += "<p><b>Result: " + result + "</b></p>";
+            debug_out.innerHTML = debug_text;
         }
 
 
@@ -107,7 +107,7 @@
     </script>
     <style>
         #calc_area{
-            width: 250px;
+            width: auto;
             margin: 15px; padding: 15px;
             border: 3px solid skyblue;
             border-radius: 40px;
@@ -178,3 +178,4 @@
 </div>
 </body>
 </html>
+
