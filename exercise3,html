@@ -57,9 +57,12 @@
         var name_val = document.getElementById('name').value;
         var type_val = document.getElementById('type').value;
 
-        // for
-
-        // retutn
+        for(var i =0; i<data.length; i++){
+            if(data[i].name==name_val){
+                alert('중복된 항목 입니다.');
+                return;
+            }
+        }
 
         data[data.length] = {name: name_val, type: type_val};
 
