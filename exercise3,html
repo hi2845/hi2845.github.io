@@ -7,8 +7,8 @@
 </head>
 <body>
 <div>
-<input type="radio" name="view" checked>테이블
-<input type="radio" name="view">목록
+    <input type="radio" name="view" checked>테이블
+    <input type="radio" name="view">목록
 </div>
 <div id="view_area">
 </div>
@@ -39,9 +39,11 @@
             }
             html += '</table>';
         } else {
-            // TODO: 목록을 선택했을때 보여주기 위한 코드
-
-            // -----
+            html += '<ul>';
+            for (var i = 0; i < data.length; i++) {
+                html += '<li><il>' + data[i].name +'</il> : <il>'+ data[i].type + '</il></li>';
+            }
+            html += '</ul>';
         }
 
         document.getElementById('view_area').innerHTML = html;
@@ -55,9 +57,9 @@
         var name_val = document.getElementById('name').value;
         var type_val = document.getElementById('type').value;
 
-        // TODO: 동일한 이름이 존재하면 추가되지 않도록 하는 코드를 작성.
+        // for
 
-        // -----
+        // retutn
 
         data[data.length] = {name: name_val, type: type_val};
 
